@@ -22,7 +22,7 @@ Behavior-driven development (BDD) is an Agile software development methodology i
 	- Commit Message Editor
 	- Live Share (optional)
 # Installation
-1. Clone the repo- https://github.com/CDL-samir-thaker/Cypress-BDD-Demo-with-TypeScript.git
+1. Clone the repo- https://github.com/samirthaker2020/Cypress-BDD-Typescript-html-report.git
 2. Open the vs code terminal,
 ```typescript
  npm intall or npm i
