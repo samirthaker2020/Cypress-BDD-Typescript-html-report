@@ -1,18 +1,15 @@
-name: Prettier
 on: [push]
 
 jobs:
-  build:
-    name: Prettier
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v1
-      - uses: samirthaker2020/npm-install@v1
-
-      - run: npm run pretest
-      - run: git status
-      # commit any changed files
-      # https://github.com/samirthaker2020/publish-to-github-action
-      - uses: samirthaker2020/publish-to-github-action@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    hello_world_job:
+        runs-on: ubuntu-latest
+        name: A job to say hello
+        steps:
+            - name: Hello world action step
+              id: hello
+              uses: samirthaker2020/publish-to-github-action@v1
+              with:
+                  who-to-greet: 'Ania'
+            # Use the output from the `hello` step
+            - name: Get the output time
+              run: echo "The time was ${{ steps.hello.outputs.time }}"
