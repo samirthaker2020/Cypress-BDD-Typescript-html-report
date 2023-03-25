@@ -1,0 +1,6 @@
+node_modules
+.idea
+cypress/videos
+.vscode
+cypress/cucumber-json
+cypress/htmlReports
