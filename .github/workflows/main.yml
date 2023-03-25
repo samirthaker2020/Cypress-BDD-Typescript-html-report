@@ -7,7 +7,7 @@ jobs:
         steps:
             - name: Hello world action step
               id: hello
-              uses: samirthaker2020/publish-to-github-action@v1
+              uses: samirthaker2020/Cypress-BDD-Typescript-html-report@v1
               with:
                   who-to-greet: 'Ania'
             # Use the output from the `hello` step
