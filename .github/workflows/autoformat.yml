@@ -28,7 +28,7 @@ jobs:
             - uses: actions/checkout@v1
             - uses: bahmutov/npm-install@v1
 
-            - run: npm run format
+            - run: npm run pretest
             - run: git status
             # commit any changed files
             # https://github.com/mikeal/publish-to-github-action
