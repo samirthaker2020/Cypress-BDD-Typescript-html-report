@@ -1,42 +1,43 @@
-name: Prettier
-on: [push]
-
-jobs:
-    build:
-        name: Prettier
-        runs-on: ubuntu-latest
-        steps:
-            - uses: actions/checkout@v1
-            - uses: bahmutov/npm-install@v1
-
-            - run: npm run format
-            - run: git status
-            # commit any changed files
-            # https://github.com/mikeal/publish-to-github-action
-            - uses: mikeal/publish-to-github-action@master
-              env:
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-# name: Github Actions Example
-
-# on:
-#     pull_request:
-#     push:
-#         branches:
-#             - master
+# name: Prettier
+# on: [push]
 
 # jobs:
-#     test:
-#         name: Running Cypress Tests
+#     build:
+#         name: Prettier
 #         runs-on: ubuntu-latest
-
 #         steps:
 #             - uses: actions/checkout@v1
-#             - name: Use Node.js ${{ matrix.node-version }}
-#               uses: actions/setup-node@v1
-#               with:
-#                   node-version: ${{ matrix.node-version }}
-#             - name: Install
-#               run: npm install
-#             - name: Test
-#               run: npm run test
+#             - uses: bahmutov/npm-install@v1
+
+#             - run: npm run format
+#             - run: git status
+#             # commit any changed files
+#             # https://github.com/mikeal/publish-to-github-action
+#             - uses: mikeal/publish-to-github-action@master
+#               env:
+#                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+name: Github Actions Example
+
+on:
+    pull_request:
+    push:
+        branches:
+            - master
+
+jobs:
+    test:
+        name: Running Cypress Tests
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/checkout@v1
+            - name: Use Node.js ${{ matrix.node-version }}
+              uses: actions/setup-node@v1
+              with:
+                  node-version: ${{ matrix.node-version }}
+            - name: Install
+              run: npm install
+            - name: Test
+              run: npm run test
 
