@@ -17,6 +17,8 @@ describe('As a user, I want to login into application with a valid credentials',
 	And('the user clicks on button {string}', (btnText) => {
 		cy.get('#submit').click({ force: true });
 	});
+
+
 	Then('user can see the application dashboard', () => {
 		cy.url().should('eq', loginDashboardUrl);
 	});
