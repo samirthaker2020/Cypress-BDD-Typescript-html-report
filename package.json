@@ -1,62 +1,63 @@
 {
-  "name": "cypress bdd demo with typeScript",
-  "version": "1.0.0",
-  "description": "This is a demo cypress testing framework with typescript",
-  "main": "index.js",
-  "integrationFolder": "cypress/e2e/features",
-  "cypress-cucumber-preprocessor": {
-    "cucumberJson": {
-      "generate": true,
-      "outputFolder": "cypress/cucumber-json",
-      "filePrefix": "",
-      "fileSuffix": ".cucumber"
-    },
-    "nonGlobalStepDefinitions": false
-  },
-  "scripts": {
-    "test": "cypress run && npm run report",
-    "cy:open": "cypress open",
-    "cy:tests": "cypress run",
-    "report": "node cucumber-html-report.js",
-    "pretest": "eslint --quiet . --ext .js,.ts",
-    "pre-commit": "lint-staged",
-    "firefox-headed": "cypress run --browser firefox --headed && npm run report",
-    "firefox-headless": "cypress run --browser firefox && npm run report",
-    "chrome-headed": "cypress run --browser chrome --headed && npm run report",
-    "chrome-headless": "cypress run --browser chrome && npm run report",
-    "edge-headed": "cypress run --browser edge --headed && npm run report",
-    "edge-headless": "cypress run --browser edge && npm run report",
-    "webkit-headed": "cypress run --browser webkit --headed && npm run report",
-    "webkit-headless": "cypress run --browser webkit && npm run report",
-    "chromium-headless": "cypress run --browser chromium && npm run report",
-    "chromium-headed": "cypress run --browser chromium --headed && npm run report"
-  },
-  "author": "Samir.Thaker",
-  "license": "",
-  "dependencies": {
-    "@cypress/browserify-preprocessor": "^3.0.2",
-    "cypress-cucumber-preprocessor": "^4.3.0",
-    "editorconfig": "^1.0.2",
-    "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-prettier": "^8.7.0",
-    "eslint-plugin-cypress": "^2.12.1"
-  },
-  "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.55.0",
-    "cypress": "^12.8.1",
-    "eslint": "^8.36.0",
-    "eslint-config-standard-with-typescript": "^34.0.1",
-    "eslint-plugin-import": "^2.27.5",
-    "eslint-plugin-n": "^15.6.1",
-    "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-promise": "^6.1.1",
-    "multiple-cucumber-html-reporter": "^3.1.0",
-    "playwright-webkit": "^1.31.2",
-    "typescript": "^4.9.5"
-  },
-  "lint-staged": {
-    "**/*.{ts,js,json}": [
-      "prettier --write ."
-    ]
-  }
+	"name": "cypress bdd demo with typeScript",
+	"version": "1.0.0",
+	"description": "This is a demo cypress testing framework with typescript",
+	"main": "index.js",
+	"integrationFolder": "cypress/e2e/features",
+	"cypress-cucumber-preprocessor": {
+		"cucumberJson": {
+			"generate": true,
+			"outputFolder": "cypress/cucumber-json",
+			"filePrefix": "",
+			"fileSuffix": ".cucumber"
+		},
+		"nonGlobalStepDefinitions": false
+	},
+	"scripts": {
+		"test": "cypress run && npm run report",
+		"cy:open": "cypress open",
+		"cy:tests": "cypress run",
+		"report": "node cucumber-html-report.js",
+		"pretest": "eslint --quiet . --ext .js,.ts",
+		"pre-commit": "lint-staged",
+		"format": "prettier --write 'cypress/*.ts'",
+		"firefox-headed": "cypress run --browser firefox --headed && npm run report",
+		"firefox-headless": "cypress run --browser firefox && npm run report",
+		"chrome-headed": "cypress run --browser chrome --headed && npm run report",
+		"chrome-headless": "cypress run --browser chrome && npm run report",
+		"edge-headed": "cypress run --browser edge --headed && npm run report",
+		"edge-headless": "cypress run --browser edge && npm run report",
+		"webkit-headed": "cypress run --browser webkit --headed && npm run report",
+		"webkit-headless": "cypress run --browser webkit && npm run report",
+		"chromium-headless": "cypress run --browser chromium && npm run report",
+		"chromium-headed": "cypress run --browser chromium --headed && npm run report"
+	},
+	"author": "Samir.Thaker",
+	"license": "",
+	"dependencies": {
+		"@cypress/browserify-preprocessor": "^3.0.2",
+		"cypress-cucumber-preprocessor": "^4.3.0",
+		"editorconfig": "^1.0.2",
+		"eslint-config-airbnb": "^19.0.4",
+		"eslint-config-prettier": "^8.7.0",
+		"eslint-plugin-cypress": "^2.12.1"
+	},
+	"devDependencies": {
+		"@typescript-eslint/eslint-plugin": "^5.55.0",
+		"cypress": "^12.8.1",
+		"eslint": "^8.36.0",
+		"eslint-config-standard-with-typescript": "^34.0.1",
+		"eslint-plugin-import": "^2.27.5",
+		"eslint-plugin-n": "^15.6.1",
+		"eslint-plugin-prettier": "^4.2.1",
+		"eslint-plugin-promise": "^6.1.1",
+		"multiple-cucumber-html-reporter": "^3.1.0",
+		"playwright-webkit": "^1.31.2",
+		"typescript": "^4.9.5"
+	},
+	"lint-staged": {
+		"**/*.{ts,js,json}": [
+			"prettier --write ."
+		]
+	}
 }
